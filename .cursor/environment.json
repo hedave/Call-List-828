@@ -1,0 +1,16 @@
+{
+  "name": "Call List 828",
+  "terminals": [
+    {
+      "name": "web",
+      "command": "python3 -m http.server 8080",
+      "description": "Serves the static Call List 828 site at http://localhost:8080"
+    }
+  ],
+  "ports": [
+    {
+      "name": "web server",
+      "port": 8080
+    }
+  ]
+}
