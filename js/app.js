@@ -1,5 +1,4 @@
 (function () {
-  const STORAGE_KEY = "call-list-828-tips";
   const state = {
     shops: [],
     trade: "all",
@@ -18,9 +17,15 @@
     drawerBody: document.getElementById("drawer-body"),
     tipForm: document.getElementById("tip-form"),
     tipShop: document.getElementById("tip-shop"),
-    tipList: document.getElementById("tip-list"),
-    stampCount: document.getElementById("stamp-count")
+    tipOther: document.getElementById("tip-other"),
+    tipOtherWrap: document.getElementById("tip-other-wrap"),
+    tipName: document.getElementById("tip-name"),
+    tipNote: document.getElementById("tip-note"),
+    tipError: document.getElementById("tip-error"),
+    tipList: document.getElementById("tip-list")
   };
+
+  let tips = [];
 
   function shopsFromEmbedded() {
     return (window.CALL_LIST_828 && window.CALL_LIST_828.shops) || [];
@@ -33,7 +38,7 @@
       plumbing: "Plumbing",
       auto: "Auto",
       family: "Family",
-      esop: "ESOP",
+      esop: "Employee-owned (ESOP)",
       local: "Local",
       "heat-pump": "Heat pump",
       "old-house": "Old house",
@@ -49,6 +54,11 @@
 
   function mapsHref(shop) {
     const q = encodeURIComponent(shop.address + ", " + shop.name);
+    return "https://www.google.com/maps/search/?api=1&query=" + q;
+  }
+
+  function reviewsHref(shop) {
+    const q = encodeURIComponent(shop.name + " " + shop.address + " reviews");
     return "https://www.google.com/maps/search/?api=1&query=" + q;
   }
 
@@ -73,14 +83,19 @@
   }
 
   function quoteBlock(quote) {
-    if (!quote) {
-      return '<p class="quote">No dated r/asheville quote captured for Aug–Sep 2026. Listed from the official site.</p>';
-    }
+    if (!quote) return "";
     return (
       '<blockquote class="quote"><p>“' + escapeHtml(quote.quote) + '”</p>' +
       '<cite>' + escapeHtml(quote.author) + " · " + formatDate(quote.date) +
       ' · <a href="' + quote.permalink + '" target="_blank" rel="noopener">permalink</a></cite></blockquote>'
     );
+  }
+
+  function ownershipPills(shop) {
+    return shop.ownership
+      .filter(function (o) { return o !== "local"; })
+      .map(function (o) { return pill(o, o); })
+      .join("");
   }
 
   function formatDate(iso) {
@@ -100,7 +115,7 @@
 
   function renderCards() {
     const visible = state.shops.filter(matches);
-    els.count.textContent = visible.length + " of " + state.shops.length + " shops";
+    els.count.textContent = visible.length + " matching · " + state.shops.length + " total";
     if (!visible.length) {
       els.cards.innerHTML = '<p class="empty">Nothing matches those filters. Clear one and try again.</p>';
       return;
@@ -113,7 +128,7 @@
             "<div><h2>" + escapeHtml(shop.name) + "</h2></div>" +
             '<div class="pills">' +
               shop.trades.map(function (t) { return pill("trade", t); }).join("") +
-              shop.ownership.map(function (o) { return pill(o, o); }).join("") +
+              ownershipPills(shop) +
             "</div>" +
           "</div>" +
           (shop.skipWindow
@@ -149,14 +164,15 @@
       (shop.skipWindow
         ? '<div class="caution-banner"><strong>Skip this window.</strong> ' + escapeHtml(shop.skipWindowNote) + "</div>"
         : "") +
-      '<div class="pills" style="margin-top:0.8rem">' +
-        shop.ownership.map(function (o) { return pill(o, o); }).join("") +
+      '<div class="pills drawer-pills">' +
+        ownershipPills(shop) +
         shop.tags.map(function (t) { return pill("tag", t); }).join("") +
       "</div>" +
       '<div class="drawer-actions">' +
         (shop.phone ? '<a href="' + telHref(shop.phone) + '">Call ' + escapeHtml(shop.phone) + "</a>" : "") +
         (shop.website ? '<a class="secondary" href="' + shop.website + '" target="_blank" rel="noopener">Official site</a>' : "") +
         '<a class="secondary" href="' + mapsHref(shop) + '" target="_blank" rel="noopener">Map</a>' +
+        '<a class="secondary" href="' + reviewsHref(shop) + '" target="_blank" rel="noopener">Google reviews</a>' +
         licenseLinks +
       "</div>" +
       "<p><strong>Address.</strong> " + escapeHtml(shop.address) +
@@ -167,11 +183,9 @@
         : "") +
       "<p><strong>" + escapeHtml(shop.licenseBoard) + ".</strong> Confirm the name and status before you hire.</p>" +
       '<p class="notes">' + escapeHtml(shop.notes) + "</p>" +
-      '<div class="quotes">' +
-        (shop.quotes.length
-          ? shop.quotes.map(quoteBlock).join("")
-          : quoteBlock(null)) +
-      "</div>";
+      (shop.quotes && shop.quotes.length
+        ? '<div class="quotes">' + shop.quotes.map(quoteBlock).join("") + "</div>"
+        : "");
     els.drawer.classList.add("open");
     els.backdrop.classList.add("open");
     els.drawer.setAttribute("aria-hidden", "false");
@@ -228,22 +242,9 @@
     });
   }
 
-  function loadTips() {
-    try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-    } catch (err) {
-      return [];
-    }
-  }
-
-  function saveTips(tips) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(tips));
-  }
-
   function renderTips() {
-    const tips = loadTips();
     if (!tips.length) {
-      els.tipList.innerHTML = "<li>No neighborhood tips stored in this browser yet.</li>";
+      els.tipList.innerHTML = "<li>No tips yet.</li>";
       return;
     }
     els.tipList.innerHTML = tips.map(function (tip) {
@@ -253,31 +254,77 @@
     }).join("");
   }
 
+  function showTipError(message) {
+    if (!els.tipError) return;
+    if (!message) {
+      els.tipError.hidden = true;
+      els.tipError.textContent = "";
+      return;
+    }
+    els.tipError.hidden = false;
+    els.tipError.textContent = message;
+  }
+
+  function syncOtherShopField() {
+    const isOther = els.tipShop.value === "Other";
+    els.tipOtherWrap.hidden = !isOther;
+    els.tipOther.required = isOther;
+    if (!isOther) els.tipOther.value = "";
+  }
+
+  function selectedShopName() {
+    if (els.tipShop.value !== "Other") return els.tipShop.value.trim();
+    return els.tipOther.value.trim();
+  }
+
   function bindTips() {
+    const blank = document.createElement("option");
+    blank.value = "";
+    blank.textContent = "Choose a shop";
+    els.tipShop.appendChild(blank);
     state.shops.forEach(function (shop) {
       const option = document.createElement("option");
       option.value = shop.name;
       option.textContent = shop.name;
       els.tipShop.appendChild(option);
     });
+    const other = document.createElement("option");
+    other.value = "Other";
+    other.textContent = "Other";
+    els.tipShop.appendChild(other);
+    syncOtherShopField();
+    els.tipShop.addEventListener("change", syncOtherShopField);
     els.tipForm.addEventListener("submit", function (event) {
       event.preventDefault();
-      const tips = loadTips();
+      const shop = selectedShopName().slice(0, 80);
+      const name = els.tipName.value.trim().slice(0, 80);
+      const note = els.tipNote.value.trim().slice(0, 500);
+      if (!shop) {
+        showTipError(els.tipShop.value === "Other"
+          ? "Name the shop."
+          : "Pick a shop.");
+        return;
+      }
+      if (!note) {
+        showTipError("Write a tip first.");
+        return;
+      }
+      showTipError("");
       tips.unshift({
-        shop: els.tipShop.value,
-        name: document.getElementById("tip-name").value.trim(),
-        note: document.getElementById("tip-note").value.trim(),
+        shop: shop,
+        name: name,
+        note: note,
         when: new Date().toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
       });
-      saveTips(tips.slice(0, 40));
+      tips = tips.slice(0, 40);
       els.tipForm.reset();
+      syncOtherShopField();
       renderTips();
     });
   }
 
   function init(shops) {
     state.shops = shops;
-    els.stampCount.textContent = String(shops.length);
     bindFilters();
     bindDrawer();
     bindTips();
@@ -296,6 +343,6 @@
     .then(function (res) { return res.json(); })
     .then(function (data) { init(data.shops || []); })
     .catch(function () {
-      els.cards.innerHTML = '<p class="empty">Could not load shops. Open index.html next to js/shops-data.js.</p>';
+      els.cards.innerHTML = '<p class="empty">Could not load shops. Check that the shop data file is next to this page.</p>';
     });
 })();

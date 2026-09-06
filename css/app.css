@@ -102,23 +102,17 @@ textarea:focus-visible {
 }
 
 .stamp {
+  margin: 0;
   border: 2px dashed var(--copper);
   color: var(--copper);
-  padding: 0.55rem 0.7rem;
-  min-width: 8.5rem;
+  padding: 0.55rem 0.75rem;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   font-family: "Avenir Next", "Segoe UI", sans-serif;
-  font-size: 0.75rem;
-  transform: rotate(3deg);
-}
-
-.stamp strong {
-  display: block;
-  font-size: 1.4rem;
-  letter-spacing: 0;
-  color: var(--ink);
+  font-size: 0.78rem;
+  transform: rotate(2deg);
+  align-self: center;
 }
 
 .filters {
@@ -320,6 +314,13 @@ textarea:focus-visible {
   border: 1px solid var(--forest);
 }
 
+.tip-error {
+  margin: 0;
+  color: #6a2410;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.88rem;
+}
+
 .tip-list {
   list-style: none;
   padding: 0;
@@ -338,6 +339,10 @@ textarea:focus-visible {
   padding: 0.5rem 0 2.5rem;
   color: var(--ink-soft);
   font-size: 0.9rem;
+}
+
+.colophon p {
+  max-width: 40rem;
 }
 
 .drawer-backdrop {
@@ -395,6 +400,10 @@ textarea:focus-visible {
   border-radius: 999px;
   cursor: pointer;
   font: inherit;
+}
+
+.drawer-pills {
+  margin-top: 0.8rem;
 }
 
 .drawer-actions {
