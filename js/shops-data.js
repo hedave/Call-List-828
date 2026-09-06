@@ -1,0 +1,424 @@
+/* Call List 828 shop records. Loaded by index.html for file:// opens.
+   Keep in sync with data/shops.json. */
+window.CALL_LIST_828 = {
+  "site": "Call List 828",
+  "area": "Buncombe County / Asheville, NC",
+  "updated": "2026-09-06",
+  "sourceNote": "Verified from official shop sites plus r/asheville threads dated August 2026. Phones are copied from official sites or the shop's BBB listing. None are invented.",
+  "shops": [
+    {
+      "id": "all-about-heat-air",
+      "name": "All About Heat & Air",
+      "trades": [
+        "hvac"
+      ],
+      "ownership": [
+        "family",
+        "local"
+      ],
+      "tags": [
+        "heat-pump"
+      ],
+      "skipWindow": true,
+      "skipWindowNote": "Popular late-summer book. If you need a tech in this heat-pump / changeover window, call someone else first and circle back when their board opens.",
+      "phone": "828-778-2560",
+      "website": "https://allaboutheatandairnc.com/",
+      "address": "5521 Old Haywood Rd, Ste 3, Mills River, NC 28759",
+      "alsoAt": "79 Woodfin Place, Suite 203 D2, Asheville, NC 28801",
+      "serviceArea": "Asheville, Buncombe, Hendersonville, Mills River, Brevard, Waynesville",
+      "licenseLookup": "https://public.nclicensing.org/Public/Search",
+      "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
+      "notes": "Family-owned HVAC shop. Official site lists 24/7 emergency service. Mitsubishi inverter / heat-pump work mentioned on r/asheville in August 2026.",
+      "quotes": [
+        {
+          "date": "2026-08-14",
+          "author": "u/cubert73",
+          "quote": "We replaced an older York with a new Mitsubishi inverter system from All About Heating & Air. No, not a mini-split, it's technology that's been around in Europe and Asia for a while but is relatively new to the US. We're outside Brevard at about 3,000 feet and it's worked great for us.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1vlgnrn/"
+        }
+      ]
+    },
+    {
+      "id": "all-seasons-hvac",
+      "name": "All Seasons Heating & Air",
+      "trades": [
+        "hvac"
+      ],
+      "ownership": [
+        "family",
+        "local"
+      ],
+      "tags": [
+        "heat-pump"
+      ],
+      "skipWindow": true,
+      "skipWindowNote": "Same booking crush as All About. Two generations, locally loved, and often already stacked for this window. Skip them if you need a slot this week.",
+      "phone": "828-651-9998",
+      "website": "https://www.allseasonsnc.com/",
+      "address": "147 Emmas Grove Road, Fletcher, NC 28732",
+      "serviceArea": "Fletcher, Asheville, and Western North Carolina",
+      "licenseLookup": "https://public.nclicensing.org/Public/Search",
+      "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
+      "notes": "Family-operated since 1996. Official site (checked September 2026) still lists text-or-call 828-651-9998. No dated r/asheville quote captured for Aug–Sep 2026; listed from the official site and the paired skip-this-window caution with All About.",
+      "quotes": []
+    },
+    {
+      "id": "sheer-comfort",
+      "name": "Sheer Comfort Heating & Air",
+      "trades": [
+        "hvac"
+      ],
+      "ownership": [
+        "local"
+      ],
+      "tags": [
+        "heat-pump"
+      ],
+      "skipWindow": false,
+      "phone": "828-651-8111",
+      "website": "https://sheercomfortheatingandair.com/",
+      "address": "154 Fletcher Commercial Drive, Fletcher, NC 28732",
+      "serviceArea": "Asheville, Fletcher, Hendersonville",
+      "licenseLookup": "https://public.nclicensing.org/Public/Search",
+      "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
+      "notes": "Repeated August 2026 r/asheville pick for Bosch / dual-fuel heat pumps. Neighbors say mention Reddit.",
+      "quotes": [
+        {
+          "date": "2026-08-14",
+          "author": "u/FineCardiologist1414",
+          "quote": "Just had this same scenario come up with our 25 year old HVAC. I got 4 quotes, and ultimately decided to go with the Bosch IDS system over the comparable Trane system. It was quieter and about the same cost. Highly recommend Sheer Comfort! Not owned by a roll up, really nice people, and the best price I could find locally.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1vlgnrn/"
+        },
+        {
+          "date": "2026-08-06",
+          "author": "u/Squirrelmasta23",
+          "quote": "Sheer Comfort, mention Reddit for discounts.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1vcwskk/"
+        }
+      ]
+    },
+    {
+      "id": "horizon-hvac",
+      "name": "Horizon Heating & Air",
+      "trades": [
+        "hvac"
+      ],
+      "ownership": [
+        "local"
+      ],
+      "tags": [],
+      "skipWindow": false,
+      "phone": "828-882-2098",
+      "website": "https://horizonheatac.com/",
+      "address": "1581 N Allen Rd, Hendersonville, NC 28792",
+      "serviceArea": "Hendersonville, Asheville, Arden, Fletcher, Brevard, and surrounding WNC",
+      "licenses": [
+        "30744",
+        "21747",
+        "M115057"
+      ],
+      "licenseLookup": "https://public.nclicensing.org/Public/Search",
+      "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
+      "notes": "Named twice in August 2026 r/asheville HVAC threads. Official about page lists license numbers 30744, 21747, and M115057.",
+      "quotes": [
+        {
+          "date": "2026-08-14",
+          "author": "u/SoupAndALightSalad",
+          "quote": "We have a Trane and use Horizon HVAC. Both work very well for us. However what is most important whatever brand you choose is regular maintenance.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1vlgnrn/"
+        },
+        {
+          "date": "2026-08-06",
+          "author": "u/redtf111",
+          "quote": "Horizon",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1vcwskk/"
+        }
+      ]
+    },
+    {
+      "id": "mashburn-mechanical",
+      "name": "Mashburn Mechanical",
+      "trades": [
+        "hvac"
+      ],
+      "ownership": [
+        "local"
+      ],
+      "tags": [],
+      "skipWindow": false,
+      "phone": "828-290-9284",
+      "website": "https://mashburnmechanical.com/",
+      "address": "Fletcher, NC",
+      "serviceArea": "Asheville and Fletcher area",
+      "licenseLookup": "https://public.nclicensing.org/Public/Search",
+      "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
+      "notes": "Local shop; neighbors name Randy. Official site advertises 24-hour emergency service and all brands. Street address was not published on the contact page we checked, so the card uses Fletcher only.",
+      "quotes": [
+        {
+          "date": "2026-08-14",
+          "author": "u/Ill-Wear-7934",
+          "quote": "Mashburn Mechanical..Randy is great.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1vlgnrn/"
+        },
+        {
+          "date": "2026-08-06",
+          "author": "u/Ill-Wear-7934",
+          "quote": "Mashburn Mechanical",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1vcwskk/"
+        }
+      ]
+    },
+    {
+      "id": "thompson-mechanical",
+      "name": "Thompson Mechanical",
+      "trades": [
+        "hvac"
+      ],
+      "ownership": [
+        "family",
+        "local"
+      ],
+      "tags": [],
+      "skipWindow": false,
+      "phone": "828-684-3700",
+      "website": "https://tmihvac.com/",
+      "address": "422 Butler Bridge Rd, Fletcher, NC 28732",
+      "serviceArea": "Fletcher and Western North Carolina",
+      "licenseLookup": "https://public.nclicensing.org/Public/Search",
+      "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
+      "notes": "In business since 1976. Phone is the number on their BBB-accredited listing (not invented). Official site is tmihvac.com.",
+      "quotes": [
+        {
+          "date": "2026-08-06",
+          "author": "u/Cautious-Bar-965",
+          "quote": "Don't know how far they'll go from Fletcher, but Thompson Mechanical is one of the best AC companies I have ever dealt with.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1vcwskk/"
+        }
+      ]
+    },
+    {
+      "id": "quality-comfort",
+      "name": "Quality Comfort",
+      "trades": [
+        "hvac"
+      ],
+      "ownership": [
+        "family",
+        "local"
+      ],
+      "tags": [
+        "heat-pump"
+      ],
+      "skipWindow": false,
+      "phone": "828-252-8544",
+      "website": "https://www.qualitycomfortwnc.com/",
+      "address": "629 Emma Rd, Asheville, NC 28806",
+      "serviceArea": "Asheville and Western North Carolina",
+      "licenseLookup": "https://public.nclicensing.org/Public/Search",
+      "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
+      "notes": "Family-owned since 2005 per official site. Named on the August 14, 2026 Trane thread. A separate August 6 comment only said “Quality Air”; that shop is not listed here because we could not confirm an official phone.",
+      "quotes": [
+        {
+          "date": "2026-08-14",
+          "author": "u/Low_Positive3359",
+          "quote": "We used Quality Comfort for our new build and we're pleased with the results. They used to install Lennox but switched to Trane a few years back. We may overpay slightly for the annual maintenance, I think it's $150, but we figure it's peace of mind.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1vlgnrn/"
+        }
+      ]
+    },
+    {
+      "id": "mikes-heating-cooling",
+      "name": "Mike's Heating & Cooling",
+      "trades": [
+        "hvac"
+      ],
+      "ownership": [
+        "local"
+      ],
+      "tags": [],
+      "skipWindow": false,
+      "phone": "828-665-4343",
+      "website": "https://www.mikesheatingandcooling.com/",
+      "address": "329 Dogwood Rd, Candler, NC 28715",
+      "serviceArea": "Asheville, Waynesville, Hendersonville, Candler",
+      "licenses": [
+        "36169"
+      ],
+      "licenseLookup": "https://public.nclicensing.org/Public/Search",
+      "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
+      "notes": "Official site lists license #36169 (H-1, H-2, H-3 Class 1) and service since 1990.",
+      "quotes": [
+        {
+          "date": "2026-08-14",
+          "author": "u/ProfessionalElk4544",
+          "quote": "I have a Trane system. No complaints whatsoever. My house is actually freezing today. My son likes it cold.lol. Mike's Heating and Cooling installed it",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1vlgnrn/"
+        }
+      ]
+    },
+    {
+      "id": "mb-haynes",
+      "name": "MB Haynes",
+      "trades": [
+        "hvac",
+        "electrical",
+        "plumbing"
+      ],
+      "ownership": [
+        "esop",
+        "local"
+      ],
+      "tags": [
+        "old-house",
+        "heat-pump"
+      ],
+      "skipWindow": false,
+      "phone": "828-254-6141",
+      "website": "https://www.mbhaynes.com/",
+      "address": "187 Deaverview Road, Asheville, NC 28806",
+      "serviceArea": "Asheville and Western North Carolina",
+      "licenseLookup": "https://public.nclicensing.org/Public/Search",
+      "licenseLookupElectrical": "https://www.ncbeec.org/",
+      "licenseBoard": "NC trade boards (plumbing/heating and electrical)",
+      "notes": "Employee-owned (ESOP) multi-trade shop since 1921. Official residential line is 828-254-6141. No dated r/asheville quote captured for Aug–Sep 2026; listed from the official site as the local ESOP option.",
+      "quotes": []
+    },
+    {
+      "id": "a-american-electric",
+      "name": "A-American Electric",
+      "trades": [
+        "electrical"
+      ],
+      "ownership": [
+        "family",
+        "local"
+      ],
+      "tags": [
+        "old-house"
+      ],
+      "skipWindow": true,
+      "skipWindowNote": "Big, busy, and often weeks out on service. If the panel or outlet cannot wait, skip this window and call a smaller crew.",
+      "phone": "828-684-7560",
+      "website": "https://a-americanelectric.com/",
+      "address": "25 Sheehan Rd, Fletcher, NC 28732",
+      "serviceArea": "Asheville, Arden, Fletcher, Hendersonville, and WNC",
+      "licenseLookup": "https://www.ncbeec.org/",
+      "licenseBoard": "NC Board of Examiners of Electrical Contractors",
+      "notes": "Family-owned electrical contractor since 1981. Phone and Fletcher shop are from the official contact page. No dated r/asheville quote captured for Aug–Sep 2026.",
+      "quotes": []
+    },
+    {
+      "id": "power-to-the-people",
+      "name": "Power to the People",
+      "trades": [
+        "electrical"
+      ],
+      "ownership": [
+        "local"
+      ],
+      "tags": [
+        "knob-and-tube",
+        "old-house",
+        "mobile"
+      ],
+      "skipWindow": false,
+      "phone": "828-551-9843",
+      "website": "https://www.avlp2p.com/",
+      "address": "West Asheville (crews come to you)",
+      "serviceArea": "Asheville neighborhoods plus about 50 miles around Buncombe",
+      "licenses": [
+        "33298"
+      ],
+      "licenseLookup": "https://www.ncbeec.org/",
+      "licenseBoard": "NC Board of Examiners of Electrical Contractors",
+      "notes": "Andrew Holbein, NCBELC #33298. Official site is explicit about knob-and-tube in pre-1950 Asheville houses and about coming to you. r/asheville quotes below are from May 2026; August Google reviews on their site are newer but are not Reddit.",
+      "quotes": [
+        {
+          "date": "2026-05-28",
+          "author": "u/Xina123",
+          "quote": "I used you guys for a job and have recommended you on here. I’d 100% use you again.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1tpeeu5/"
+        },
+        {
+          "date": "2026-05-28",
+          "author": "u/center_Ash_dez",
+          "quote": "I have used Andrew and Power to the People for several jobs around my house, these guys are great",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1tpeeu5/"
+        }
+      ]
+    },
+    {
+      "id": "crown-electric",
+      "name": "Crown Electric Services",
+      "trades": [
+        "electrical"
+      ],
+      "ownership": [
+        "local"
+      ],
+      "tags": [
+        "knob-and-tube",
+        "old-house"
+      ],
+      "skipWindow": false,
+      "phone": "828-545-9329",
+      "website": "https://crownelectricservices.com/",
+      "address": "126 Elkwood Ave, Asheville, NC 28804",
+      "serviceArea": "Asheville and surrounding communities",
+      "licenseLookup": "https://www.ncbeec.org/",
+      "licenseBoard": "NC Board of Examiners of Electrical Contractors",
+      "notes": "Owner Jared Crown. Official site and Google reviews describe historic-home rewires, panel work, and EV chargers. No dated r/asheville quote captured for Aug–Sep 2026; listed from the official site as the knob-and-tube / old-house option alongside Power to the People.",
+      "quotes": []
+    },
+    {
+      "id": "four-seasons-plumbing",
+      "name": "Four Seasons Plumbing",
+      "trades": [
+        "plumbing"
+      ],
+      "ownership": [
+        "family",
+        "local"
+      ],
+      "tags": [],
+      "skipWindow": false,
+      "phone": "828-809-1752",
+      "website": "https://callfourseasons.com/",
+      "address": "Asheville, NC",
+      "serviceArea": "Asheville, Arden, Black Mountain, Candler, Fletcher, Weaverville, and nearby towns listed on their site",
+      "licenseLookup": "https://public.nclicensing.org/Public/Search",
+      "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
+      "notes": "Family owned and operated, 20+ years, BBB A+ per official site. Phone 828-809-1752 is published on callfourseasons.com. Street address was not listed on the homepage we checked. No dated r/asheville quote captured for Aug–Sep 2026.",
+      "quotes": []
+    },
+    {
+      "id": "xpertech-car-care",
+      "name": "Xpertech Car Care",
+      "trades": [
+        "auto"
+      ],
+      "ownership": [
+        "local"
+      ],
+      "tags": [
+        "older-cars"
+      ],
+      "skipWindow": false,
+      "phone": "828-298-3612",
+      "website": "https://xpertechcarcare.com/",
+      "address": "1295 Tunnel Rd, Asheville, NC 28805",
+      "serviceArea": "East Asheville",
+      "licenseLookup": "https://www.ncdot.gov/dmv/",
+      "licenseBoard": "NCDMV inspection / shop listing (auto)",
+      "notes": "Locally owned east of Asheville since 1999. Named on the August 14, 2026 older-car thread (2002 Jeep) and earlier 2026 mechanic threads.",
+      "quotes": [
+        {
+          "date": "2026-08-14",
+          "author": "u/Sea_Cat_5899",
+          "quote": "Xpertech! Very no BS, very local.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1vmqmsx/"
+        }
+      ]
+    }
+  ]
+};

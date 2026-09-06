@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Call List 828 — Buncombe trades directory</title>
+  <meta name="description" content="A static Asheville / Buncombe County call list of HVAC, electrical, plumbing, and auto shops named on r/asheville, with official phones only.">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <a class="skip-link" href="#results">Skip to shops</a>
+  <header class="masthead">
+    <div>
+      <p class="eyebrow">Buncombe County · Asheville · 828</p>
+      <h1>Call List 828</h1>
+      <p class="lede">
+        A short list of trades people actually name on r/asheville.
+        Phones come from official sites. Quotes are dated. If a shop is slammed
+        this week, the card says so.
+      </p>
+    </div>
+    <div class="stamp" aria-hidden="true">
+      Verified shops
+      <strong id="stamp-count">14</strong>
+      Aug–Sep 2026
+    </div>
+  </header>
+
+  <section class="filters" aria-label="Filters">
+    <input class="search" id="search" type="search" placeholder="Search a shop, trade, or quote" aria-label="Search shops">
+    <div class="filter-row">
+      <span>Trade</span>
+      <button type="button" data-filter="trade" data-value="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="trade" data-value="hvac" aria-pressed="false">HVAC</button>
+      <button type="button" data-filter="trade" data-value="electrical" aria-pressed="false">Electrical</button>
+      <button type="button" data-filter="trade" data-value="plumbing" aria-pressed="false">Plumbing</button>
+      <button type="button" data-filter="trade" data-value="auto" aria-pressed="false">Auto</button>
+    </div>
+    <div class="filter-row">
+      <span>Ownership</span>
+      <button type="button" data-filter="ownership" data-value="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="ownership" data-value="family" aria-pressed="false">Family</button>
+      <button type="button" data-filter="ownership" data-value="esop" aria-pressed="false">ESOP</button>
+      <button type="button" data-filter="ownership" data-value="local" aria-pressed="false">Local</button>
+    </div>
+    <div class="filter-row">
+      <span>Tags</span>
+      <button type="button" data-filter="tag" data-value="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="tag" data-value="heat-pump" aria-pressed="false">Heat pump</button>
+      <button type="button" data-filter="tag" data-value="old-house" aria-pressed="false">Old house</button>
+      <button type="button" data-filter="tag" data-value="knob-and-tube" aria-pressed="false">Knob-and-tube</button>
+      <button type="button" data-filter="tag" data-value="older-cars" aria-pressed="false">Older cars</button>
+      <button type="button" data-filter="tag" data-value="mobile" aria-pressed="false">Mobile</button>
+    </div>
+    <div class="results-meta">
+      <p id="result-count">14 of 14 shops</p>
+      <button class="reset" type="button" id="reset-filters">Clear filters</button>
+    </div>
+  </section>
+
+  <main id="results" class="results">
+    <div id="cards" class="cards"></div>
+  </main>
+
+  <section class="about">
+    <h2>How this list was built</h2>
+    <p>
+      Fourteen shops, checked against official sites in September 2026 and
+      against r/asheville threads from August 2026 (HVAC replacements, South
+      Asheville service, and older-car mechanics). If a phone was not on the
+      shop’s own site or its BBB listing, it is not here.
+    </p>
+    <p>
+      All About / All Seasons and A-American Electric get a
+      <strong>skip this window</strong> caution: they are the names people
+      reach for first, and they fill up. Use them later. Call the other cards
+      this week.
+    </p>
+  </section>
+
+  <section class="tips" id="tips">
+    <h2>Leave a tip on this computer</h2>
+    <p>Tips stay in this browser’s localStorage. They are not uploaded anywhere.</p>
+    <form id="tip-form">
+      <label>
+        Shop
+        <select id="tip-shop" required></select>
+      </label>
+      <label>
+        Your name (optional)
+        <input id="tip-name" type="text" maxlength="80" autocomplete="name">
+      </label>
+      <label>
+        What should a neighbor know?
+        <textarea id="tip-note" required maxlength="500" rows="3"></textarea>
+      </label>
+      <button type="submit">Save tip locally</button>
+    </form>
+    <ul id="tip-list" class="tip-list"></ul>
+  </section>
+
+  <footer class="colophon">
+    <p>Call List 828 · static directory · open <code>index.html</code> from the folder. No server required.</p>
+  </footer>
+
+  <button class="drawer-backdrop" id="drawer-backdrop" type="button" aria-label="Close shop details"></button>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Shop details">
+    <div id="drawer-body"></div>
+  </aside>
+
+  <script src="js/shops-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
