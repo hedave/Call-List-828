@@ -320,6 +320,13 @@ textarea:focus-visible {
   border: 1px solid var(--forest);
 }
 
+.tip-error {
+  margin: 0;
+  color: #6a2410;
+  font-family: "Avenir Next", "Segoe UI", sans-serif;
+  font-size: 0.88rem;
+}
+
 .tip-list {
   list-style: none;
   padding: 0;
@@ -338,6 +345,10 @@ textarea:focus-visible {
   padding: 0.5rem 0 2.5rem;
   color: var(--ink-soft);
   font-size: 0.9rem;
+}
+
+.colophon p {
+  max-width: 40rem;
 }
 
 .drawer-backdrop {
@@ -395,6 +406,10 @@ textarea:focus-visible {
   border-radius: 999px;
   cursor: pointer;
   font: inherit;
+}
+
+.drawer-pills {
+  margin-top: 0.8rem;
 }
 
 .drawer-actions {

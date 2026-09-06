@@ -59,7 +59,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Fletcher, Asheville, and Western North Carolina",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "Family-operated since 1996. Official site (checked September 2026) still lists text-or-call 828-651-9998. No dated r/asheville quote captured for Aug–Sep 2026; listed from the official site and the paired skip-this-window caution with All About.",
+      "notes": "Family-operated since 1996. Official site still lists text-or-call 828-651-9998.",
       "quotes": []
     },
     {
@@ -186,7 +186,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Fletcher and Western North Carolina",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "In business since 1976. Phone is the number on their BBB-accredited listing (not invented). Official site is tmihvac.com.",
+      "notes": "In business since 1976. Phone is from their BBB listing. Official site is tmihvac.com.",
       "quotes": [
         {
           "date": "2026-08-06",
@@ -280,7 +280,7 @@ window.CALL_LIST_828 = {
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseLookupElectrical": "https://www.ncbeec.org/",
       "licenseBoard": "NC trade boards (plumbing/heating and electrical)",
-      "notes": "Employee-owned (ESOP) multi-trade shop since 1921. Official residential line is 828-254-6141. No dated r/asheville quote captured for Aug–Sep 2026; listed from the official site as the local ESOP option.",
+      "notes": "Employee-owned (ESOP) multi-trade shop since 1921. Official residential line is 828-254-6141.",
       "quotes": []
     },
     {
@@ -304,7 +304,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Asheville, Arden, Fletcher, Hendersonville, and WNC",
       "licenseLookup": "https://www.ncbeec.org/",
       "licenseBoard": "NC Board of Examiners of Electrical Contractors",
-      "notes": "Family-owned electrical contractor since 1981. Phone and Fletcher shop are from the official contact page. No dated r/asheville quote captured for Aug–Sep 2026.",
+      "notes": "Family-owned electrical contractor since 1981. Phone and Fletcher shop are from their contact page.",
       "quotes": []
     },
     {
@@ -331,7 +331,7 @@ window.CALL_LIST_828 = {
       ],
       "licenseLookup": "https://www.ncbeec.org/",
       "licenseBoard": "NC Board of Examiners of Electrical Contractors",
-      "notes": "Andrew Holbein, NCBELC #33298. Official site is explicit about knob-and-tube in pre-1950 Asheville houses and about coming to you. r/asheville quotes below are from May 2026; August Google reviews on their site are newer but are not Reddit.",
+      "notes": "Andrew Holbein, NCBELC #33298. Knob-and-tube in pre-1950 Asheville houses; they come to you.",
       "quotes": [
         {
           "date": "2026-05-28",
@@ -367,7 +367,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Asheville and surrounding communities",
       "licenseLookup": "https://www.ncbeec.org/",
       "licenseBoard": "NC Board of Examiners of Electrical Contractors",
-      "notes": "Owner Jared Crown. Official site and Google reviews describe historic-home rewires, panel work, and EV chargers. No dated r/asheville quote captured for Aug–Sep 2026; listed from the official site as the knob-and-tube / old-house option alongside Power to the People.",
+      "notes": "Owner Jared Crown. Historic-home rewires, panel work, and EV chargers.",
       "quotes": []
     },
     {
@@ -388,7 +388,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Asheville, Arden, Black Mountain, Candler, Fletcher, Weaverville, and nearby towns listed on their site",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "Family owned and operated, 20+ years, BBB A+ per official site. Phone 828-809-1752 is published on callfourseasons.com. Street address was not listed on the homepage we checked. No dated r/asheville quote captured for Aug–Sep 2026.",
+      "notes": "Family owned and operated, 20+ years, BBB A+ per their site. Street address was not on the homepage we checked.",
       "quotes": []
     },
     {

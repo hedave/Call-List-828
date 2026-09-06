@@ -18,6 +18,11 @@
     drawerBody: document.getElementById("drawer-body"),
     tipForm: document.getElementById("tip-form"),
     tipShop: document.getElementById("tip-shop"),
+    tipOther: document.getElementById("tip-other"),
+    tipOtherWrap: document.getElementById("tip-other-wrap"),
+    tipName: document.getElementById("tip-name"),
+    tipNote: document.getElementById("tip-note"),
+    tipError: document.getElementById("tip-error"),
     tipList: document.getElementById("tip-list"),
     stampCount: document.getElementById("stamp-count")
   };
@@ -52,6 +57,11 @@
     return "https://www.google.com/maps/search/?api=1&query=" + q;
   }
 
+  function reviewsHref(shop) {
+    const q = encodeURIComponent(shop.name + " " + shop.address + " reviews");
+    return "https://www.google.com/maps/search/?api=1&query=" + q;
+  }
+
   function matches(shop) {
     if (state.trade !== "all" && !shop.trades.includes(state.trade)) return false;
     if (state.ownership !== "all" && !shop.ownership.includes(state.ownership)) return false;
@@ -74,7 +84,7 @@
 
   function quoteBlock(quote) {
     if (!quote) {
-      return '<p class="quote">No dated r/asheville quote captured for Aug–Sep 2026. Listed from the official site.</p>';
+      return '<p class="quote">No r/asheville quote on file. Open the card for Google Maps reviews.</p>';
     }
     return (
       '<blockquote class="quote"><p>“' + escapeHtml(quote.quote) + '”</p>' +
@@ -149,7 +159,7 @@
       (shop.skipWindow
         ? '<div class="caution-banner"><strong>Skip this window.</strong> ' + escapeHtml(shop.skipWindowNote) + "</div>"
         : "") +
-      '<div class="pills" style="margin-top:0.8rem">' +
+      '<div class="pills drawer-pills">' +
         shop.ownership.map(function (o) { return pill(o, o); }).join("") +
         shop.tags.map(function (t) { return pill("tag", t); }).join("") +
       "</div>" +
@@ -157,6 +167,7 @@
         (shop.phone ? '<a href="' + telHref(shop.phone) + '">Call ' + escapeHtml(shop.phone) + "</a>" : "") +
         (shop.website ? '<a class="secondary" href="' + shop.website + '" target="_blank" rel="noopener">Official site</a>' : "") +
         '<a class="secondary" href="' + mapsHref(shop) + '" target="_blank" rel="noopener">Map</a>' +
+        '<a class="secondary" href="' + reviewsHref(shop) + '" target="_blank" rel="noopener">Google reviews</a>' +
         licenseLinks +
       "</div>" +
       "<p><strong>Address.</strong> " + escapeHtml(shop.address) +
@@ -230,20 +241,31 @@
 
   function loadTips() {
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+      const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+      if (!Array.isArray(parsed)) return [];
+      return parsed.filter(function (tip) {
+        return tip && typeof tip === "object" &&
+          typeof tip.shop === "string" &&
+          typeof tip.note === "string";
+      }).slice(0, 40);
     } catch (err) {
       return [];
     }
   }
 
   function saveTips(tips) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(tips));
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(tips));
+      return true;
+    } catch (err) {
+      return false;
+    }
   }
 
   function renderTips() {
     const tips = loadTips();
     if (!tips.length) {
-      els.tipList.innerHTML = "<li>No neighborhood tips stored in this browser yet.</li>";
+      els.tipList.innerHTML = "<li>No tips yet.</li>";
       return;
     }
     els.tipList.innerHTML = tips.map(function (tip) {
@@ -253,24 +275,75 @@
     }).join("");
   }
 
+  function showTipError(message) {
+    if (!els.tipError) return;
+    if (!message) {
+      els.tipError.hidden = true;
+      els.tipError.textContent = "";
+      return;
+    }
+    els.tipError.hidden = false;
+    els.tipError.textContent = message;
+  }
+
+  function syncOtherShopField() {
+    const isOther = els.tipShop.value === "Other";
+    els.tipOtherWrap.hidden = !isOther;
+    els.tipOther.required = isOther;
+    if (!isOther) els.tipOther.value = "";
+  }
+
+  function selectedShopName() {
+    if (els.tipShop.value !== "Other") return els.tipShop.value.trim();
+    return els.tipOther.value.trim();
+  }
+
   function bindTips() {
+    const blank = document.createElement("option");
+    blank.value = "";
+    blank.textContent = "Choose a shop";
+    els.tipShop.appendChild(blank);
     state.shops.forEach(function (shop) {
       const option = document.createElement("option");
       option.value = shop.name;
       option.textContent = shop.name;
       els.tipShop.appendChild(option);
     });
+    const other = document.createElement("option");
+    other.value = "Other";
+    other.textContent = "Other";
+    els.tipShop.appendChild(other);
+    syncOtherShopField();
+    els.tipShop.addEventListener("change", syncOtherShopField);
     els.tipForm.addEventListener("submit", function (event) {
       event.preventDefault();
+      const shop = selectedShopName().slice(0, 80);
+      const name = els.tipName.value.trim().slice(0, 80);
+      const note = els.tipNote.value.trim().slice(0, 500);
+      if (!shop) {
+        showTipError(els.tipShop.value === "Other"
+          ? "Name the shop."
+          : "Pick a shop.");
+        return;
+      }
+      if (!note) {
+        showTipError("Write a tip first.");
+        return;
+      }
+      showTipError("");
       const tips = loadTips();
       tips.unshift({
-        shop: els.tipShop.value,
-        name: document.getElementById("tip-name").value.trim(),
-        note: document.getElementById("tip-note").value.trim(),
+        shop: shop,
+        name: name,
+        note: note,
         when: new Date().toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
       });
-      saveTips(tips.slice(0, 40));
+      if (!saveTips(tips.slice(0, 40))) {
+        showTipError("Could not save that tip. Try again.");
+        return;
+      }
       els.tipForm.reset();
+      syncOtherShopField();
       renderTips();
     });
   }

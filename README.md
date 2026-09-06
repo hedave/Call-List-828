@@ -22,9 +22,9 @@ Then visit `http://localhost:8080`.
 
 | File | Role |
 | --- | --- |
-| `index.html` | Directory, filters, detail drawer, local tip form |
+| `index.html` | Directory, filters, detail drawer, tip form |
 | `css/app.css` | Layout and print-shop styling |
-| `js/app.js` | Filters, drawer, localStorage tips |
+| `js/app.js` | Filters, drawer, tips |
 | `js/shops-data.js` | Embedded shop records for `file://` |
 | `data/shops.json` | Same records, easier to edit |
 
@@ -34,7 +34,7 @@ Then visit `http://localhost:8080`.
 - **Ownership:** family, ESOP, local
 - **Tags:** heat pump, old house, knob-and-tube, older cars, mobile
 
-Cards show a dated Reddit quote and permalink when one was captured. The drawer has call, official site, map, and NC license lookup.
+Cards show a dated Reddit quote and permalink when one was captured. The drawer has call, official site, map, Google reviews, and NC license lookup. Shops without a quote link out to Google Maps instead of invented review text.
 
 ## Skip this window
 
@@ -42,7 +42,7 @@ All About Heat & Air, All Seasons Heating & Air, and A-American Electric are mar
 
 ## Tips
 
-The tip form writes only to `localStorage` in this browser (`call-list-828-tips`). Nothing is sent to a server.
+The on-page form is labeled **Leave a tip for others**. The shop list includes **Other**, and the button is **Submit**. Nothing is posted to a server.
 
 ## Sources
 
