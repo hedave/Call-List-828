@@ -1,5 +1,4 @@
 (function () {
-  const STORAGE_KEY = "call-list-828-tips";
   const state = {
     shops: [],
     trade: "all",
@@ -23,9 +22,10 @@
     tipName: document.getElementById("tip-name"),
     tipNote: document.getElementById("tip-note"),
     tipError: document.getElementById("tip-error"),
-    tipList: document.getElementById("tip-list"),
-    stampLine: document.getElementById("stamp-line")
+    tipList: document.getElementById("tip-list")
   };
+
+  let tips = [];
 
   function shopsFromEmbedded() {
     return (window.CALL_LIST_828 && window.CALL_LIST_828.shops) || [];
@@ -115,7 +115,7 @@
 
   function renderCards() {
     const visible = state.shops.filter(matches);
-    els.count.textContent = visible.length + " of " + state.shops.length + " shops";
+    els.count.textContent = visible.length + " matching · " + state.shops.length + " total";
     if (!visible.length) {
       els.cards.innerHTML = '<p class="empty">Nothing matches those filters. Clear one and try again.</p>';
       return;
@@ -242,31 +242,7 @@
     });
   }
 
-  function loadTips() {
-    try {
-      const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-      if (!Array.isArray(parsed)) return [];
-      return parsed.filter(function (tip) {
-        return tip && typeof tip === "object" &&
-          typeof tip.shop === "string" &&
-          typeof tip.note === "string";
-      }).slice(0, 40);
-    } catch (err) {
-      return [];
-    }
-  }
-
-  function saveTips(tips) {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(tips));
-      return true;
-    } catch (err) {
-      return false;
-    }
-  }
-
   function renderTips() {
-    const tips = loadTips();
     if (!tips.length) {
       els.tipList.innerHTML = "<li>No tips yet.</li>";
       return;
@@ -334,17 +310,13 @@
         return;
       }
       showTipError("");
-      const tips = loadTips();
       tips.unshift({
         shop: shop,
         name: name,
         note: note,
         when: new Date().toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })
       });
-      if (!saveTips(tips.slice(0, 40))) {
-        showTipError("Could not save that tip. Try again.");
-        return;
-      }
+      tips = tips.slice(0, 40);
       els.tipForm.reset();
       syncOtherShopField();
       renderTips();
@@ -353,9 +325,6 @@
 
   function init(shops) {
     state.shops = shops;
-    if (els.stampLine) {
-      els.stampLine.textContent = shops.length + " shops · checked Sep 2026";
-    }
     bindFilters();
     bindDrawer();
     bindTips();
@@ -374,6 +343,6 @@
     .then(function (res) { return res.json(); })
     .then(function (data) { init(data.shops || []); })
     .catch(function () {
-      els.cards.innerHTML = '<p class="empty">Could not load shops. Open index.html next to js/shops-data.js.</p>';
+      els.cards.innerHTML = '<p class="empty">Could not load shops. Check that the shop data file is next to this page.</p>';
     });
 })();

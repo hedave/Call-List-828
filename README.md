@@ -1,14 +1,14 @@
 # Call List 828
 
-A static Buncombe County / Asheville trades directory. Fourteen shops named on r/asheville in August 2026, with phones copied from official sites only.
+A static Buncombe County / Asheville trades directory. Local recommendations named on r/asheville, with phone numbers copied from official sites only. Updated monthly.
 
 ## Open the site
 
-No build step. No server.
+No build step.
 
 1. Clone or download this repo.
-2. Open `index.html` in a browser (double-click the file, or drag it onto a window).
-3. Shops load from `js/shops-data.js`, so `file://` works. `data/shops.json` is the same list for editing.
+2. Open the homepage in a browser (double-click the file, or drag it onto a window).
+3. Shops load from `js/shops-data.js`, so a file open works. `data/shops.json` is the same list for editing.
 
 If you prefer a local server:
 
@@ -42,7 +42,7 @@ All About Heat & Air, All Seasons Heating & Air, and A-American Electric are mar
 
 ## Tips
 
-The on-page form is labeled **Leave a tip for others**. The shop list includes **Other**, and the button is **Submit**. Nothing is posted to a server.
+The on-page form is labeled **Leave a tip**. The shop list includes **Other**, and the button is **Submit**.
 
 ## Sources
 
