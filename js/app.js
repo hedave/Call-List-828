@@ -24,7 +24,7 @@
     tipNote: document.getElementById("tip-note"),
     tipError: document.getElementById("tip-error"),
     tipList: document.getElementById("tip-list"),
-    stampCount: document.getElementById("stamp-count")
+    stampLine: document.getElementById("stamp-line")
   };
 
   function shopsFromEmbedded() {
@@ -38,7 +38,7 @@
       plumbing: "Plumbing",
       auto: "Auto",
       family: "Family",
-      esop: "ESOP",
+      esop: "Employee-owned (ESOP)",
       local: "Local",
       "heat-pump": "Heat pump",
       "old-house": "Old house",
@@ -83,14 +83,19 @@
   }
 
   function quoteBlock(quote) {
-    if (!quote) {
-      return '<p class="quote">No r/asheville quote on file. Open the card for Google Maps reviews.</p>';
-    }
+    if (!quote) return "";
     return (
       '<blockquote class="quote"><p>“' + escapeHtml(quote.quote) + '”</p>' +
       '<cite>' + escapeHtml(quote.author) + " · " + formatDate(quote.date) +
       ' · <a href="' + quote.permalink + '" target="_blank" rel="noopener">permalink</a></cite></blockquote>'
     );
+  }
+
+  function ownershipPills(shop) {
+    return shop.ownership
+      .filter(function (o) { return o !== "local"; })
+      .map(function (o) { return pill(o, o); })
+      .join("");
   }
 
   function formatDate(iso) {
@@ -123,7 +128,7 @@
             "<div><h2>" + escapeHtml(shop.name) + "</h2></div>" +
             '<div class="pills">' +
               shop.trades.map(function (t) { return pill("trade", t); }).join("") +
-              shop.ownership.map(function (o) { return pill(o, o); }).join("") +
+              ownershipPills(shop) +
             "</div>" +
           "</div>" +
           (shop.skipWindow
@@ -160,7 +165,7 @@
         ? '<div class="caution-banner"><strong>Skip this window.</strong> ' + escapeHtml(shop.skipWindowNote) + "</div>"
         : "") +
       '<div class="pills drawer-pills">' +
-        shop.ownership.map(function (o) { return pill(o, o); }).join("") +
+        ownershipPills(shop) +
         shop.tags.map(function (t) { return pill("tag", t); }).join("") +
       "</div>" +
       '<div class="drawer-actions">' +
@@ -178,11 +183,9 @@
         : "") +
       "<p><strong>" + escapeHtml(shop.licenseBoard) + ".</strong> Confirm the name and status before you hire.</p>" +
       '<p class="notes">' + escapeHtml(shop.notes) + "</p>" +
-      '<div class="quotes">' +
-        (shop.quotes.length
-          ? shop.quotes.map(quoteBlock).join("")
-          : quoteBlock(null)) +
-      "</div>";
+      (shop.quotes && shop.quotes.length
+        ? '<div class="quotes">' + shop.quotes.map(quoteBlock).join("") + "</div>"
+        : "");
     els.drawer.classList.add("open");
     els.backdrop.classList.add("open");
     els.drawer.setAttribute("aria-hidden", "false");
@@ -350,7 +353,9 @@
 
   function init(shops) {
     state.shops = shops;
-    els.stampCount.textContent = String(shops.length);
+    if (els.stampLine) {
+      els.stampLine.textContent = shops.length + " shops · checked Sep 2026";
+    }
     bindFilters();
     bindDrawer();
     bindTips();

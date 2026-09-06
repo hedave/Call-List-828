@@ -31,10 +31,10 @@ Then visit `http://localhost:8080`.
 ## Filters
 
 - **Trade:** HVAC, electrical, plumbing, auto
-- **Ownership:** family, ESOP, local
+- **Ownership:** family, employee-owned (ESOP)
 - **Tags:** heat pump, old house, knob-and-tube, older cars, mobile
 
-Cards show a dated Reddit quote and permalink when one was captured. The drawer has call, official site, map, Google reviews, and NC license lookup. Shops without a quote link out to Google Maps instead of invented review text.
+Cards show a dated Reddit quote and permalink when one was captured. Shops without a quote omit the block. The drawer has call, official site, map, Google reviews, and NC license lookup. No invented review text.
 
 ## Skip this window
 

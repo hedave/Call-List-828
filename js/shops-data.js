@@ -28,7 +28,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Asheville, Buncombe, Hendersonville, Mills River, Brevard, Waynesville",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "Family-owned HVAC shop. Official site lists 24/7 emergency service. Mitsubishi inverter / heat-pump work mentioned on r/asheville in August 2026.",
+      "notes": "The Mitsubishi / heat-pump name people keep repeating — and they book up.",
       "quotes": [
         {
           "date": "2026-08-14",
@@ -59,7 +59,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Fletcher, Asheville, and Western North Carolina",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "Family-operated since 1996. Official site still lists text-or-call 828-651-9998.",
+      "notes": "Two-generation Fletcher shop, often named in the same breath as All About.",
       "quotes": []
     },
     {
@@ -81,7 +81,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Asheville, Fletcher, Hendersonville",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "Repeated August 2026 r/asheville pick for Bosch / dual-fuel heat pumps. Neighbors say mention Reddit.",
+      "notes": "The Bosch / dual-fuel pick; neighbors say mention Reddit.",
       "quotes": [
         {
           "date": "2026-08-14",
@@ -119,7 +119,7 @@ window.CALL_LIST_828 = {
       ],
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "Named twice in August 2026 r/asheville HVAC threads. Official about page lists license numbers 30744, 21747, and M115057.",
+      "notes": "Hendersonville HVAC that came up in two August threads.",
       "quotes": [
         {
           "date": "2026-08-14",
@@ -152,7 +152,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Asheville and Fletcher area",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "Local shop; neighbors name Randy. Official site advertises 24-hour emergency service and all brands. Street address was not published on the contact page we checked, so the card uses Fletcher only.",
+      "notes": "Fletcher crew; neighbors name Randy.",
       "quotes": [
         {
           "date": "2026-08-14",
@@ -186,7 +186,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Fletcher and Western North Carolina",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "In business since 1976. Phone is from their BBB listing. Official site is tmihvac.com.",
+      "notes": "Family shop in Fletcher since 1976.",
       "quotes": [
         {
           "date": "2026-08-06",
@@ -216,7 +216,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Asheville and Western North Carolina",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "Family-owned since 2005 per official site. Named on the August 14, 2026 Trane thread. A separate August 6 comment only said “Quality Air”; that shop is not listed here because we could not confirm an official phone.",
+      "notes": "West Asheville family shop that came up on the Trane thread.",
       "quotes": [
         {
           "date": "2026-08-14",
@@ -246,7 +246,7 @@ window.CALL_LIST_828 = {
       ],
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "Official site lists license #36169 (H-1, H-2, H-3 Class 1) and service since 1990.",
+      "notes": "Candler shop that’s been installing and servicing since 1990.",
       "quotes": [
         {
           "date": "2026-08-14",
@@ -280,7 +280,7 @@ window.CALL_LIST_828 = {
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseLookupElectrical": "https://www.ncbeec.org/",
       "licenseBoard": "NC trade boards (plumbing/heating and electrical)",
-      "notes": "Employee-owned (ESOP) multi-trade shop since 1921. Official residential line is 828-254-6141.",
+      "notes": "Employee-owned Asheville shop that does HVAC, electrical, and plumbing.",
       "quotes": []
     },
     {
@@ -304,7 +304,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Asheville, Arden, Fletcher, Hendersonville, and WNC",
       "licenseLookup": "https://www.ncbeec.org/",
       "licenseBoard": "NC Board of Examiners of Electrical Contractors",
-      "notes": "Family-owned electrical contractor since 1981. Phone and Fletcher shop are from their contact page.",
+      "notes": "The big family electrical shop — often weeks out.",
       "quotes": []
     },
     {
@@ -331,7 +331,7 @@ window.CALL_LIST_828 = {
       ],
       "licenseLookup": "https://www.ncbeec.org/",
       "licenseBoard": "NC Board of Examiners of Electrical Contractors",
-      "notes": "Andrew Holbein, NCBELC #33298. Knob-and-tube in pre-1950 Asheville houses; they come to you.",
+      "notes": "West Asheville knob-and-tube crew that comes to you.",
       "quotes": [
         {
           "date": "2026-05-28",
@@ -367,7 +367,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Asheville and surrounding communities",
       "licenseLookup": "https://www.ncbeec.org/",
       "licenseBoard": "NC Board of Examiners of Electrical Contractors",
-      "notes": "Owner Jared Crown. Historic-home rewires, panel work, and EV chargers.",
+      "notes": "North Asheville electrician for old-house rewires and panels.",
       "quotes": []
     },
     {
@@ -388,7 +388,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "Asheville, Arden, Black Mountain, Candler, Fletcher, Weaverville, and nearby towns listed on their site",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "Family owned and operated, 20+ years, BBB A+ per their site. Street address was not on the homepage we checked.",
+      "notes": "Family plumber covering Asheville and the nearby towns.",
       "quotes": []
     },
     {
@@ -410,7 +410,7 @@ window.CALL_LIST_828 = {
       "serviceArea": "East Asheville",
       "licenseLookup": "https://www.ncdot.gov/dmv/",
       "licenseBoard": "NCDMV inspection / shop listing (auto)",
-      "notes": "Locally owned east of Asheville since 1999. Named on the August 14, 2026 older-car thread (2002 Jeep) and earlier 2026 mechanic threads.",
+      "notes": "East Asheville shop people name for older cars.",
       "quotes": [
         {
           "date": "2026-08-14",

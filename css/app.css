@@ -102,23 +102,17 @@ textarea:focus-visible {
 }
 
 .stamp {
+  margin: 0;
   border: 2px dashed var(--copper);
   color: var(--copper);
-  padding: 0.55rem 0.7rem;
-  min-width: 8.5rem;
+  padding: 0.55rem 0.75rem;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   font-family: "Avenir Next", "Segoe UI", sans-serif;
-  font-size: 0.75rem;
-  transform: rotate(3deg);
-}
-
-.stamp strong {
-  display: block;
-  font-size: 1.4rem;
-  letter-spacing: 0;
-  color: var(--ink);
+  font-size: 0.78rem;
+  transform: rotate(2deg);
+  align-self: center;
 }
 
 .filters {
