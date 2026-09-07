@@ -74,10 +74,18 @@
         Shop
         <select id="tip-shop" required></select>
       </label>
-      <label id="tip-other-wrap" hidden>
-        Which shop?
-        <input id="tip-other" type="text" maxlength="80" autocomplete="off">
-      </label>
+      <div id="tip-other-wrap" hidden>
+        <label>
+          Which shop?
+          <input id="tip-other" type="text" maxlength="80" autocomplete="off">
+        </label>
+      </div>
+      <div id="tip-hp-wrap" hidden aria-hidden="true">
+        <label>
+          Company website
+          <input id="tip-hp" type="text" tabindex="-1" autocomplete="off">
+        </label>
+      </div>
       <label>
         Your name (optional)
         <input id="tip-name" type="text" maxlength="80" autocomplete="name">

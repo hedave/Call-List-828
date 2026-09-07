@@ -18,6 +18,11 @@
   box-sizing: border-box;
 }
 
+/* Author display rules beat the UA [hidden] { display: none }. Keep it winning. */
+[hidden] {
+  display: none !important;
+}
+
 html,
 body {
   margin: 0;
