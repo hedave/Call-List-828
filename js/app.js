@@ -19,6 +19,7 @@
     tipShop: document.getElementById("tip-shop"),
     tipOther: document.getElementById("tip-other"),
     tipOtherWrap: document.getElementById("tip-other-wrap"),
+    tipHp: document.getElementById("tip-hp"),
     tipName: document.getElementById("tip-name"),
     tipNote: document.getElementById("tip-note"),
     tipError: document.getElementById("tip-error"),
@@ -265,16 +266,32 @@
     els.tipError.textContent = message;
   }
 
+  function listedShopNames() {
+    return state.shops.map(function (shop) { return shop.name; });
+  }
+
   function syncOtherShopField() {
-    const isOther = els.tipShop.value === "Other";
+    const value = els.tipShop.value;
+    const isOther = value === "Other";
+    const named = Boolean(value) && !isOther;
     els.tipOtherWrap.hidden = !isOther;
+    els.tipOtherWrap.setAttribute("aria-hidden", String(!isOther));
     els.tipOther.required = isOther;
-    if (!isOther) els.tipOther.value = "";
+    els.tipOther.readOnly = !isOther;
+    if (named) {
+      els.tipOther.value = value;
+    } else if (!isOther) {
+      els.tipOther.value = "";
+    } else if (listedShopNames().indexOf(els.tipOther.value) !== -1) {
+      els.tipOther.value = "";
+    }
   }
 
   function selectedShopName() {
-    if (els.tipShop.value !== "Other") return els.tipShop.value.trim();
-    return els.tipOther.value.trim();
+    const value = els.tipShop.value;
+    if (value === "Other") return els.tipOther.value.trim();
+    if (listedShopNames().indexOf(value) !== -1) return value;
+    return "";
   }
 
   function bindTips() {
@@ -296,6 +313,10 @@
     els.tipShop.addEventListener("change", syncOtherShopField);
     els.tipForm.addEventListener("submit", function (event) {
       event.preventDefault();
+      if (els.tipHp && els.tipHp.value.trim()) {
+        showTipError("Could not submit.");
+        return;
+      }
       const shop = selectedShopName().slice(0, 80);
       const name = els.tipName.value.trim().slice(0, 80);
       const note = els.tipNote.value.trim().slice(0, 500);
