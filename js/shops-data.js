@@ -3,8 +3,8 @@
 window.CALL_LIST_828 = {
   "site": "Call List 828",
   "area": "Buncombe County / Asheville, NC",
-  "updated": "2026-09-06",
-  "sourceNote": "Verified from official shop sites plus r/asheville threads dated August 2026. Phones are copied from official sites or the shop's BBB listing. None are invented.",
+  "updated": "2026-10-01",
+  "sourceNote": "Verified 2026-10-01 from official shop sites plus r/asheville threads. Phones are copied from official sites. None are invented. Reddit quotes include permalinks; no Google paraphrases.",
   "shops": [
     {
       "id": "all-about-heat-air",
@@ -20,11 +20,11 @@ window.CALL_LIST_828 = {
         "heat-pump"
       ],
       "skipWindow": true,
-      "skipWindowNote": "Popular late-summer book. If you need a tech in this heat-pump / changeover window, call someone else first and circle back when their board opens.",
-      "phone": "828-778-2560",
+      "skipWindowNote": "Popular in the heat-pump / changeover window. If you need a tech this week, call someone else first and circle back when their board opens.",
+      "phone": "828-778-2425",
       "website": "https://allaboutheatandairnc.com/",
       "address": "5521 Old Haywood Rd, Ste 3, Mills River, NC 28759",
-      "alsoAt": "79 Woodfin Place, Suite 203 D2, Asheville, NC 28801",
+      "alsoAt": "79 Woodfin Place, Suite 203 D2, Asheville, NC 28801; 1270 N Allen Road Suite 2, Hendersonville, NC 28792",
       "serviceArea": "Asheville, Buncombe, Hendersonville, Mills River, Brevard, Waynesville",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
@@ -69,6 +69,7 @@ window.CALL_LIST_828 = {
         "hvac"
       ],
       "ownership": [
+        "family",
         "local"
       ],
       "tags": [
@@ -94,6 +95,12 @@ window.CALL_LIST_828 = {
           "author": "u/Squirrelmasta23",
           "quote": "Sheer Comfort, mention Reddit for discounts.",
           "permalink": "https://www.reddit.com/r/asheville/comments/1vcwskk/"
+        },
+        {
+          "date": "2026-07-19",
+          "author": "u/CommunicationIcy9773",
+          "quote": "I've had great experiences with Shear Comfort",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1v0sk2j/"
         }
       ]
     },
@@ -119,7 +126,7 @@ window.CALL_LIST_828 = {
       ],
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
-      "notes": "Hendersonville HVAC that came up in two August threads.",
+      "notes": "Hendersonville HVAC that came up in July and August threads.",
       "quotes": [
         {
           "date": "2026-08-14",
@@ -132,6 +139,12 @@ window.CALL_LIST_828 = {
           "author": "u/redtf111",
           "quote": "Horizon",
           "permalink": "https://www.reddit.com/r/asheville/comments/1vcwskk/"
+        },
+        {
+          "date": "2026-07-19",
+          "author": "u/mtnviewguy",
+          "quote": "Horizon is excellent! They do all of my home systems HVAC and gas,and have a regular maintenance program that's reasonably priced.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1v0sk2j/"
         }
       ]
     },
@@ -165,6 +178,12 @@ window.CALL_LIST_828 = {
           "author": "u/Ill-Wear-7934",
           "quote": "Mashburn Mechanical",
           "permalink": "https://www.reddit.com/r/asheville/comments/1vcwskk/"
+        },
+        {
+          "date": "2026-07-19",
+          "author": "u/AC2Bee42",
+          "quote": "Have had great experience with Mashburn mechanical https://mashburnmechanical.com",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1v0sk2j/"
         }
       ]
     },
@@ -233,6 +252,7 @@ window.CALL_LIST_828 = {
         "hvac"
       ],
       "ownership": [
+        "family",
         "local"
       ],
       "tags": [],
@@ -253,6 +273,12 @@ window.CALL_LIST_828 = {
           "author": "u/ProfessionalElk4544",
           "quote": "I have a Trane system. No complaints whatsoever. My house is actually freezing today. My son likes it cold.lol. Mike's Heating and Cooling installed it",
           "permalink": "https://www.reddit.com/r/asheville/comments/1vlgnrn/"
+        },
+        {
+          "date": "2026-07-19",
+          "author": "u/ProfessionalElk4544",
+          "quote": "Mike's heating and air is great. Everyone whom i have dealt with are knowledgeable and friendly. They did our install. Seamless",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1v0sk2j/"
         }
       ]
     },
@@ -281,7 +307,14 @@ window.CALL_LIST_828 = {
       "licenseLookupElectrical": "https://www.ncbeec.org/",
       "licenseBoard": "NC trade boards (plumbing/heating and electrical)",
       "notes": "Employee-owned Asheville shop that does HVAC, electrical, and plumbing.",
-      "quotes": []
+      "quotes": [
+        {
+          "date": "2025-09-11",
+          "author": "u/sowhat4",
+          "quote": "MB Haynes won out on price for me. I have a yearly contract for four heat pumps, two A/C units, and three gas furnaces. If you can, request Ledin to do the service as he's really smart and honest. Plus, it's a big company and have 24/7 service - with you getting priority if you have a maintenance contract.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1ned5zb/"
+        }
+      ]
     },
     {
       "id": "a-american-electric",
@@ -384,7 +417,8 @@ window.CALL_LIST_828 = {
       "skipWindow": false,
       "phone": "828-809-1752",
       "website": "https://callfourseasons.com/",
-      "address": "Asheville, NC",
+      "address": "3632 Butler Bridge Road, Mills River, NC 28759",
+      "alsoAt": "Mailing: 30 Bella Way, Asheville, NC 28803",
       "serviceArea": "Asheville, Arden, Black Mountain, Candler, Fletcher, Weaverville, and nearby towns listed on their site",
       "licenseLookup": "https://public.nclicensing.org/Public/Search",
       "licenseBoard": "NC Plumbing, Heating & Fire Sprinkler Board",
@@ -417,6 +451,12 @@ window.CALL_LIST_828 = {
           "author": "u/Sea_Cat_5899",
           "quote": "Xpertech! Very no BS, very local.",
           "permalink": "https://www.reddit.com/r/asheville/comments/1vmqmsx/"
+        },
+        {
+          "date": "2026-03-09",
+          "author": "u/mincky",
+          "quote": "I'm happy with Xpertech in east Asheville. I've also gone to Mike Byers on Sweeten Creek Rd.",
+          "permalink": "https://www.reddit.com/r/asheville/comments/1rom7z0/"
         }
       ]
     }
