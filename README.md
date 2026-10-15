@@ -46,11 +46,18 @@ The on-page form is labeled **Leave a tip**. The shop list includes **Other**, a
 
 ## Sources
 
-Checked September 2026 against official sites and these r/asheville threads:
+Checked 15 Oct 2026 against official sites and these r/asheville threads:
 
+- [Which HVAC company do you recommend for new install in an old house?](https://www.reddit.com/r/asheville/comments/1w2y78o/) (31 Aug 2026)
 - [HVAC Maintenance and repairs serving South Asheville](https://www.reddit.com/r/asheville/comments/1vcwskk/) (6 Aug 2026)
 - [Central A/C replacement. Trane?](https://www.reddit.com/r/asheville/comments/1vlgnrn/) (14 Aug 2026)
 - [Mechanic Needed - Mom and Pop/Community-Driven](https://www.reddit.com/r/asheville/comments/1vmqmsx/) (14 Aug 2026)
+- [HVAC recommendations? who is good and who should be avoided?](https://www.reddit.com/r/asheville/comments/1v0sk2j/) (19 Jul 2026)
+- [Looking for an independent mechanic reccomendation](https://www.reddit.com/r/asheville/comments/1ulghwe/) (3 Jul 2026)
+- [What is the best, honest and trustworthy mechanic in Asheville?](https://www.reddit.com/r/asheville/comments/1rom7z0/) (9 Mar 2026)
+- [Electrician Recommendations for upgrade](https://www.reddit.com/r/asheville/comments/1pi3f2n/) (9 Dec 2025)
+- [Fair HVAC Inspection/Service Company?](https://www.reddit.com/r/asheville/comments/1ned5zb/) (11 Sep 2025)
+- [Looking for a plumber recommendation](https://www.reddit.com/r/asheville/comments/1mquv4o/) (15 Aug 2025)
 - [Power to the People](https://www.reddit.com/r/asheville/comments/1tpeeu5/) (28 May 2026; older quote, kept because the shop is the knob-and-tube specialist)
 
 License lookups:
